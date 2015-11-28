@@ -89,7 +89,7 @@ void do_sparks()
 
 void do_flares()
 {
-  const double reference = 70;
+  const double reference = 130;
   const double amplitude = 60;
   for (int i = 0; i < 10; i ++)
   {
@@ -104,6 +104,7 @@ void do_flares()
       servo3.write(reference - i * growthC);
       delay(10);
     }
+    set_color(0, 0, 0);
     delay(500);
   }
 }
